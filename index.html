@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,300&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ab05b769d3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Home expenses calculator for couples</title>
+</head>
+
+
+<body>
+    <section class="wrapper">
+
+        <div class="main">
+            <div class="main__header">
+                <h1 class="main__header-title">Household bills calculator for couples</h1>
+                <p class="main__header-info">Enter the name and net income for each partner below:</p>
+            </div>
+
+            <div class="main__input">
+                <div class="main__input-fields">
+                    <p>Partner 1:</p>
+                    <input class="person1-name" type="text" placeholder="Name">
+                    <input class="person1-earnings" type="number" placeholder="0">
+                </div>
+                <div class="main__input-fields expenses-field">
+                    <p>Monthly expenses:</p>
+                    <input class="expenses" type="number" placeholder="0">
+                    <button class="btn">Calculate</button>
+                </div>
+                <div class="main__input-fields">
+                    <p>Partner 2</p>
+                    <input class="person2-name" type="text" placeholder="Name">
+                    <input class="person2-earnings" type="number" placeholder="0">
+                </div>
+            </div>
+
+            <div class="main__error">
+            <p class="main__error-msg"></p>
+            </div>
+
+            <div class="bar"></div>
+
+            <div class="main__calculations">
+                <p class="results">Fair share: <span class="result-percentage">?</span></p>
+                <div class="main__calculations-persons">
+                    <div class="result-persons">
+                        <p class="result result-person-one"></p>
+                        <p class="result result-one"></p>
+                    </div>
+                    <div class="result-persons">
+                        <p class="result result-person-two"></p>
+                        <p class="result result-two"></p>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+        </div>
+
+    </section>
+    <script src="./js/scripts.js"></script>
+</body>
+
+</html>

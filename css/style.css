@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  background-color: #526d82;
+  font-family: "Open Sans", sans-serif;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+p {
+  padding-bottom: 0.3em;
+  font-size: 1.5rem;
+  color: #2e2e2e;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.bar {
+  margin: 2em;
+  height: 1px;
+  width: 95%;
+  background-color: grey;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3em 2em;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #2e2e2e;
+  border-radius: 10px;
+  text-align: center;
+}
+.main__header-title {
+  padding: 0.5em 0.5em 0 0.5em;
+  font-size: 3.5rem;
+  color: #2e2e2e;
+}
+.main__header-info {
+  padding: 1em;
+  font-size: 2rem;
+  color: #2e2e2e;
+}
+.main__input {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.main__input input {
+  margin: 0.2em;
+  text-align: center;
+  height: 1.5em;
+  width: 12em;
+}
+.main__input input::-webkit-inner-spin-button,
+.main__input input::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+.main__input input[type=number] {
+  -moz-appearance: textfield;
+}
+.main__input .btn {
+  margin: 0.2em;
+  height: 1.5em;
+  width: 12em;
+  border: none;
+  color: #2e2e2e;
+  transition: color 300ms, background 300ms;
+}
+.main__input .btn:hover {
+  background: #27374d;
+  color: white;
+}
+.main__input-fields {
+  display: flex;
+  flex-direction: column;
+  order: 1;
+}
+.main__input .expenses-field {
+  order: 2;
+}
+.main__error {
+  margin: 1em;
+}
+.main__error-msg {
+  color: red;
+}
+.main__calculations {
+  text-align: center;
+}
+.main__calculations .results {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.main__calculations .result {
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+.main__calculations .result-persons {
+  margin: 1em;
+}
+.main__calculations-persons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+@media (min-width: 448px) {
+  body {
+    height: 100lvh;
+    background: linear-gradient(206deg, #27374d, #526d82, #9db2bf);
+  }
+  .main__input-fields {
+    order: 2;
+  }
+}/*# sourceMappingURL=style.css.map */
