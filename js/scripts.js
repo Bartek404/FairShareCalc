@@ -1,23 +1,24 @@
-const person1Input = document.querySelector('.person1-name')
-const person1Income = document.querySelector('.person1-earnings')
-const person2Input = document.querySelector('.person2-name')
-const person2Income = document.querySelector('.person2-earnings')
+const personOneNameInput = document.querySelector('.person1-name')
+const personOneIncome = document.querySelector('.person1-earnings')
+const personTwoNameInput = document.querySelector('.person2-name')
+const personTwoIncome = document.querySelector('.person2-earnings')
 const expensesInput = document.querySelector('.expenses')
 const btn = document.querySelector('.btn')
 const error = document.querySelector('.main__error-msg')
+
 const personOneName = document.querySelector('.result-person-one')
-const resultOne = document.querySelector('.result-one')
+const personOneResult = document.querySelector('.result-one')
 const personTwoName = document.querySelector('.result-person-two')
-const resultTwo = document.querySelector('.result-two')
+const personTwoResult = document.querySelector('.result-two')
 const result = document.querySelector('.result-percentage')
 
 let person1object = {}
 let person2object = {}
 
 const getNames = () => {
-	if (person1Input.value && person2Input.value !== '') {
-		personOneName.textContent = person1Input.value
-		personTwoName.textContent = person2Input.value
+	if (personOneNameInput.value && personTwoNameInput.value !== '') {
+		personOneName.textContent = personOneNameInput.value
+		personTwoName.textContent = personTwoNameInput.value
 		error.textContent = ''
 	} else {
 		error.textContent = 'Please enter correct names!'
@@ -25,7 +26,7 @@ const getNames = () => {
 }
 
 const getPercentage1 = income => {
-	if (person1Income.value != 0) {
+	if (personOneIncome.value != 0) {
 		for (let i = 0; i <= 100; i++) {
 			person1object[i] = Math.round((income * i) / 100)
 		}
@@ -35,7 +36,7 @@ const getPercentage1 = income => {
 }
 
 const getPercentage2 = income => {
-	if (person2Income.value != 0) {
+	if (personTwoIncome.value != 0) {
 		for (let i = 0; i <= 100; i++) {
 			person2object[i] = Math.round((income * i) / 100)
 		}
@@ -47,19 +48,19 @@ const getPercentage2 = income => {
 const getFairShare = () => {
 	if (
 		expensesInput.value != 0 &&
-		expensesInput.valueAsNumber <= person1Income.valueAsNumber + person2Income.valueAsNumber
+		expensesInput.valueAsNumber <= personOneIncome.valueAsNumber + personTwoIncome.valueAsNumber
 	) {
 		for (const [i] of Object.entries(person1object) && Object.entries(person2object)) {
 			if (
 				person1object[i] + person2object[i] >= expensesInput.value &&
-				(person1object[i] * 100) / person1Income.value === (person2object[i] * 100) / person2Income.value
+				(person1object[i] * 100) / personOneIncome.value === (person2object[i] * 100) / personTwoIncome.value
 			) {
-				console.log((person1object[i] * 100) / person1Income.value, (person2object[i] * 100) / person2Income.value)
+				console.log((person1object[i] * 100) / personOneIncome.value, (person2object[i] * 100) / personTwoIncome.value)
 				console.log(person1object[i])
 				console.log(person2object[i])
-				resultOne.textContent = person1object[i]
-				resultTwo.textContent = person2object[i]
-				return (result.textContent = `${(person1object[i] * 100) / person1Income.value}%`)
+				personOneResult.textContent = person1object[i]
+				personTwoResult.textContent = person2object[i]
+				return (result.textContent = `${(person1object[i] * 100) / personOneIncome.value}%`)
 			}
 		}
 	} else {
@@ -69,8 +70,8 @@ const getFairShare = () => {
 
 const allFunctions = () => {
 	getNames()
-	getPercentage1(person1Income.value)
-	getPercentage2(person2Income.value)
+	getPercentage1(personOneIncome.value)
+	getPercentage2(personTwoIncome.value)
 	getFairShare()
 }
 
