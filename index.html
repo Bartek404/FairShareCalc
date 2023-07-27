@@ -19,8 +19,34 @@
 
         <div class="main">
             <div class="main__header">
-                <h1 class="main__header-title">Household bills calculator for couples</h1>
-                <p class="main__header-info">Enter the name and net income for each partner below:</p>
+                <h1 class="main__header-title">FairShare Calc</h1>
+                <p class="main__header-info">Calculator for an income-based shared household budget.</p>
+                <div class="bar"></div>
+                <p class="main__header-info">You can skip down, and type in your monthly expenses directly...</p>
+                <p class="main__header-info">...or just use the built-in calculator, work in both ways!</p>
+
+
+            </div>
+
+            <div class="main__bills">
+                <div class="main__input">
+                    <input class="bill-name-input" type="text" placeholder="What for?">
+                    <input class="bill-price-input" type="number" placeholder="Price">
+                    <button class="btn bill-add">Add</button>
+                </div>
+                <div class="bar"></div>
+
+                <ul class="main__bills-list">
+                    <!--                     <li class="list">
+                        <p class="bill-name">Dom</p>
+                        <p class="bill-price">600</p>
+                        <button class="btn-list bill-remove">Remove</button>
+                    </li> -->
+
+                </ul>
+                <!-- <button class="btn sum-bills">Sum expenses</button> -->
+                <div class="bar"></div>
+
             </div>
 
             <div class="main__input">
@@ -32,7 +58,7 @@
                 <div class="main__input-fields expenses-field">
                     <p>Monthly expenses:</p>
                     <input class="expenses" type="number" placeholder="0">
-                    <button class="btn">Calculate</button>
+                    <button class="btn btn-calculate">Calculate</button>
                 </div>
                 <div class="main__input-fields">
                     <p>Partner 2</p>
@@ -42,7 +68,7 @@
             </div>
 
             <div class="main__error">
-            <p class="main__error-msg"></p>
+                <p class="main__error-msg"></p>
             </div>
 
             <div class="bar"></div>

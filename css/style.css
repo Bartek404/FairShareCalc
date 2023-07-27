@@ -28,6 +28,40 @@ p {
   color: #2e2e2e;
 }
 
+input {
+  margin: 0.2em;
+  text-align: center;
+  height: 1.5em;
+  width: 12em;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* .error-bg {
+	background-color: rgba(255, 0, 0, 0.5);
+} */
+.btn {
+  margin: 0.2em;
+  height: 1.5em;
+  width: 12em;
+  border: none;
+  color: #2e2e2e;
+  transition: color 300ms, background 300ms;
+  cursor: pointer;
+}
+.btn:hover {
+  background: #27374d;
+  color: white;
+}
+
 .wrapper {
   margin: 0 auto;
   width: 100%;
@@ -52,47 +86,55 @@ p {
   border-radius: 10px;
   text-align: center;
 }
+.main__bills {
+  padding: 1em;
+}
+.main__bills-list .list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.main__bills-list .list .bill-name {
+  margin: 0.1em;
+  width: 1.5em;
+}
+.main__bills-list .list .bill-price {
+  text-align: left;
+}
+.main__bills-list .list .btn-list {
+  margin: 0.2em;
+  height: 1.5em;
+  width: 5em;
+  border: none;
+  color: #2e2e2e;
+  transition: color 300ms, background 300ms;
+  cursor: pointer;
+}
+.main__bills-list .list .btn-list:hover {
+  background: #27374d;
+  color: white;
+}
 .main__header-title {
   padding: 0.5em 0.5em 0 0.5em;
   font-size: 3.5rem;
   color: #2e2e2e;
 }
 .main__header-info {
-  padding: 1em;
+  padding: 0.3em 1em;
   font-size: 2rem;
   color: #2e2e2e;
+}
+.main__header-info:nth-child(2) {
+  padding-top: 1.5em;
+}
+.main__header-info:last-child {
+  padding-bottom: 1em;
 }
 .main__input {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
-}
-.main__input input {
-  margin: 0.2em;
-  text-align: center;
-  height: 1.5em;
-  width: 12em;
-}
-.main__input input::-webkit-inner-spin-button,
-.main__input input::-webkit-outer-spin-button {
-  margin: 0;
-  -webkit-appearance: none;
-}
-.main__input input[type=number] {
-  -moz-appearance: textfield;
-}
-.main__input .btn {
-  margin: 0.2em;
-  height: 1.5em;
-  width: 12em;
-  border: none;
-  color: #2e2e2e;
-  transition: color 300ms, background 300ms;
-}
-.main__input .btn:hover {
-  background: #27374d;
-  color: white;
 }
 .main__input-fields {
   display: flex;
