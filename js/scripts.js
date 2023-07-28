@@ -4,7 +4,6 @@ const addBill = document.querySelector('.bill-add')
 const billsList = document.querySelector('.main__bills-list')
 const billName = document.querySelector('.bill-name')
 const billPrice = document.querySelector('.bill-price')
-/* const sumBillsBtn = document.querySelector('.sum-bills') */
 const removeBill = document.querySelector('ul')
 let removeBillBtn = document.getElementsByClassName('bill-remove')
 
@@ -118,11 +117,16 @@ const allListeners = () => {
 	btnCalc.addEventListener('click', functions)
 	addBill.addEventListener('click', addNewBill)
 	addBill.addEventListener('click', sumAllBills)
-	/* sumBillsBtn.addEventListener('click', sumAllBills) */
 	removeBill.addEventListener('click', deleteBill)
 	document.addEventListener('keyup', e => {
 		if (e.key === 'Enter') {
 			functions()
+		}
+	})
+	billPriceInput.addEventListener('keyup', e => {
+		if (e.key === 'Shift') {
+			addNewBill()
+			sumAllBills()
 		}
 	})
 }
